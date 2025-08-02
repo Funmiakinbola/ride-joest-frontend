@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ride&Joest Fashion</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #222; color: #fff; padding: 1rem; text-align: center; }
+    nav a { margin: 0 1rem; color: white; text-decoration: none; }
+    nav a.sales-flash { color: red; font-weight: bold; animation: flash 1s infinite; }
+    @keyframes flash { 0% {opacity: 1;} 50% {opacity: 0.5;} 100% {opacity: 1;} }
+    .slider { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; }
+    .slider img { width: 100%; max-height: 300px; object-fit: cover; scroll-snap-align: center; }
+    .gallery { display: flex; flex-wrap: wrap; gap: 10px; padding: 1rem; }
+    .gallery img { width: 200px; height: auto; border-radius: 8px; }
+    form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+    form input, form textarea { padding: 10px; font-size: 1rem; }
+    form button { padding: 10px; background-color: #222; color: white; border: none; cursor: pointer; }
+    iframe { width: 100%; max-width: 600px; display: block; margin: 1rem auto; }
+    ul { list-style: none; padding: 0; display: flex; gap: 20px; justify-content: center; }
+    ul li img { height: 40px; }
+  </style>
+</head>
+<body>
+  <!-- Home Page -->
+  <header>
+    <h1>Ride&Joest</h1>
+    <nav>
+      <a href="#children">Children</a>
+      <a href="#men">Men</a>
+      <a href="#women">Women</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#fabric">Fabric</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#payment">Payment</a>
+      <a href="#return">Return Policy</a>
+      <a href="#sales" class="sales-flash">Festive Sales!</a>
+    </nav>
+    <input type="text" placeholder="Search for items...">
+  </header>
+
+  <section id="home">
+    <div class="slider">
+      <img src="images/slider/children.jpg" alt="Children Wear">
+      <img src="images/slider/men.jpg" alt="Men Wear">
+      <img src="images/slider/women.jpg" alt="Women Wear">
+      <img src="images/slider/accessories.jpg" alt="Accessories">
+      <img src="images/slider/fabric.jpg" alt="Fabric">
+    </div>
+  </section>
+
+  <section id="children">
+    <h2>Children Wear</h2>
+    <div class="gallery dynamic">
+      <img src="images/children/child1.jpg">
+      <img src="images/children/child2.jpg">
+    </div>
+  </section>
+
+  <section id="men">
+    <h2>Men Wear</h2>
+    <div class="gallery dynamic">
+      <img src="images/men/men1.jpg">
+      <img src="images/men/men2.jpg">
+    </div>
+  </section>
+
+  <section id="women">
+    <h2>Women Wear</h2>
+    <div class="gallery dynamic">
+      <img src="images/women/women1.jpg">
+      <img src="images/women/women2.jpg">
+    </div>
+  </section>
+
+  <section id="accessories">
+    <h2>Accessories</h2>
+    <div class="gallery dynamic">
+      <img src="images/accessories/acc1.jpg">
+      <img src="images/accessories/acc2.jpg">
+    </div>
+  </section>
+
+  <section id="fabric">
+    <h2>African Lace Fabrics</h2>
+    <div class="gallery dynamic">
+      <img src="images/fabric/fabric1.jpg">
+      <img src="images/fabric/fabric2.jpg">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <iframe
+      src="https://www.google.com/maps?q=Ikota%20Lekki%20Lagos&output=embed"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <h3>Vision</h3>
+    <p>To be the leading fashion destination in Africa, celebrating culture, creativity, and style.</p>
+    <h3>Mission</h3>
+    <p>To provide high-quality fashion items that inspire confidence, express individuality, and reflect African heritage.</p>
+  </section>
+
+  <section id="payment">
+    <h2>Payment Options</h2>
+    <p>We accept the following methods of payment:</p>
+    <ul>
+      <li><img src="images/payments/visa.png" alt="Visa"></li>
+      <li><img src="images/payments/mastercard.png" alt="MasterCard"></li>
+      <li><img src="images/payments/paypal.png" alt="PayPal"></li>
+    </ul>
+    <p>Also supports USSD, Bank Transfers, and Mobile Money.</p>
+  </section>
+
+  <section id="return">
+    <h2>Return Policy</h2>
+    <p>Items can be returned within 14 days of delivery in original condition with receipt. Exchanges and refunds will be processed within 5 business days. Some exclusions apply.</p>
+  </section>
+
+  <section id="sales">
+    <h2>Festive Sales!</h2>
+    <p>Enjoy up to 50% off on selected items during festive seasons. Limited time offers!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ride&Joest Fashion. All rights reserved.</p>
+  </footer>
+</body>
+</html>
